@@ -74,13 +74,13 @@ def play():
         # Check win condition
         if check_win(board, current_player):
             display_board(board)
-            print(f"🎉 Congratulations! Player {current_player} wins!")
+            print(f"Congratulations! Player {current_player} wins!")
             break
 
         # Check tie condition
         if check_tie(board):
             display_board(board)
-            print("🤝 It's a tie!")
+            print("It's a tie!")
             break
 
         # Switch players
