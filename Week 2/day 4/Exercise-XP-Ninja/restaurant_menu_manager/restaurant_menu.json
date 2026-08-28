@@ -1,0 +1,10 @@
+{
+    "items": {
+        "Vegetable soup": "10,50",
+        "Hamburger": "12,00",
+        "Milkshake": "5,50",
+        "Artichoke": "8,25",
+        "Beef stew": "15,00"
+    },
+    "valentine_items": []
+}

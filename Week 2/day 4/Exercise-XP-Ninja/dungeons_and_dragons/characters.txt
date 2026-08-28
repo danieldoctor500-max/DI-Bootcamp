@@ -1,0 +1,19 @@
+Character: Daniel
+Age: 18
+
+Strength: 15
+Dexterity: 15
+Constitution: 7
+Intelligence: 9
+Wisdom: 10
+Charisma: 12
+
+Character: Mara
+Age: 27
+
+Strength: 16
+Dexterity: 8
+Constitution: 13
+Intelligence: 15
+Wisdom: 10
+Charisma: 14
