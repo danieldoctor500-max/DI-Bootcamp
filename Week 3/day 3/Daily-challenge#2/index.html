@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Letters Only Input</title>
+</head>
+<body>
+
+  <h1>Daily Challenge: Letters Only</h1>
+  <label for="letters">Enter letters only:</label>
+  <input type="text" id="letters">
+
+  <script>
+    const input = document.getElementById("letters");
+
+    input.addEventListener("input", function () {
+      // Replace anything not a-z or A-Z with empty string
+      this.value = this.value.replace(/[^a-zA-Z]/g, "");
+    });
+  </script>
+
+</body>
+</html>
