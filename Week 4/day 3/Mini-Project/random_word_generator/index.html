@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote Catalog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="catalog">
+
+    <header class="catalog__header">
+      <p class="catalog__eyebrow">No. 04 — Reading Room</p>
+      <h1 class="catalog__title">Quote Catalog</h1>
+      <p class="catalog__subtitle">Draw a card, file a new one, or browse the shelf by author.</p>
+    </header>
+
+    <!-- ===================== PART 1: Random quote card ===================== -->
+    <section class="card-drawer">
+      <section id="quote-display" class="index-card index-card--empty" aria-live="polite">
+        <p class="index-card__hint">Press "Draw a card" to pull a quote.</p>
+      </section>
+
+      <button id="generate-btn" class="btn btn--primary">Draw a card</button>
+    </section>
+
+    <!-- ===================== PART 2: stat + like buttons ===================== -->
+    <section class="stat-rail">
+      <button id="char-with-spaces-btn" class="btn btn--ghost" disabled>Characters (with spaces)</button>
+      <button id="char-without-spaces-btn" class="btn btn--ghost" disabled>Characters (no spaces)</button>
+      <button id="word-count-btn" class="btn btn--ghost" disabled>Word count</button>
+      <button id="like-btn" class="btn btn--ghost" disabled>♡ Like <span id="like-count">0</span></button>
+    </section>
+
+    <p id="stat-result" class="stat-result"></p>
+
+    <!-- ===================== PART 2: add a new card ===================== -->
+    <section class="drawer">
+      <h2 class="drawer__title">File a new card</h2>
+      <form id="add-quote-form" class="drawer__form">
+        <label class="field">
+          <span class="field__label">Quote</span>
+          <textarea name="quote" id="new-quote" rows="3" required placeholder="Type the quote here…"></textarea>
+        </label>
+        <label class="field">
+          <span class="field__label">Author</span>
+          <input type="text" name="author" id="new-author" required placeholder="Who said it?">
+        </label>
+        <button type="submit" class="btn btn--secondary">Add to catalog</button>
+      </form>
+      <p id="add-quote-feedback" class="feedback" aria-live="polite"></p>
+    </section>
+
+    <!-- ===================== PART 3: filter by author ===================== -->
+    <section class="drawer">
+      <h2 class="drawer__title">Browse the shelf</h2>
+      <form id="filter-form" class="drawer__form drawer__form--inline">
+        <label class="field field--grow">
+          <span class="field__label">Author</span>
+          <input type="text" id="filter-author" required placeholder="e.g. Oscar Wilde">
+        </label>
+        <button type="submit" class="btn btn--secondary">Filter</button>
+      </form>
+
+      <div id="filter-result" class="filter-result" hidden>
+        <section id="filter-quote-display" class="index-card index-card--small"></section>
+        <div class="filter-nav">
+          <button id="prev-btn" class="btn btn--ghost">← Previous</button>
+          <span id="filter-position" class="filter-position"></span>
+          <button id="next-btn" class="btn btn--ghost">Next →</button>
+        </div>
+      </div>
+      <p id="filter-feedback" class="feedback" aria-live="polite"></p>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
