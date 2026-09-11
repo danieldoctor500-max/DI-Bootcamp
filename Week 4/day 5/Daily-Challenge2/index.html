@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sunrise Comparator</title>
+</head>
+<body>
+    <h1>Compare Sunrise Times</h1>
+
+    <form id="sunrise-form">
+        <fieldset>
+            <legend>City 1</legend>
+            <label>Latitude: <input type="text" id="lat1" required></label>
+            <label>Longitude: <input type="text" id="lng1" required></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>City 2</legend>
+            <label>Latitude: <input type="text" id="lat2" required></label>
+            <label>Longitude: <input type="text" id="lng2" required></label>
+        </fieldset>
+
+        <button type="submit">Get Sunrise Times</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
