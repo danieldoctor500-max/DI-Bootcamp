@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Emoji Guessing Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <h1>Emoji Guessing Game</h1>
+
+        <div id="start-screen">
+
+            <h2>Enter your name</h2>
+
+            <input
+                type="text"
+                id="player-name"
+                placeholder="Your name"
+            >
+
+            <button id="start-button">
+                Start Game
+            </button>
+
+        </div>
+
+        <div id="game-screen" class="hidden">
+
+            <p id="player-display"></p>
+
+            <p id="score">
+                Score: 0
+            </p>
+
+            <div id="emoji">
+                😀
+            </div>
+
+            <h2>
+                What does this emoji mean?
+            </h2>
+
+            <form id="guess-form">
+
+                <div id="options"></div>
+
+                <button type="submit">
+                    Submit Guess
+                </button>
+
+            </form>
+
+            <p id="feedback"></p>
+
+            <button
+                id="next-button"
+                class="hidden"
+            >
+                Next Emoji
+            </button>
+
+            <button id="finish-button">
+                Finish Game
+            </button>
+
+        </div>
+
+        <div id="result-screen" class="hidden">
+
+            <h2>Game Over!</h2>
+
+            <p id="final-score"></p>
+
+            <button id="restart-button">
+                Play Again
+            </button>
+
+        </div>
+
+        <div class="leaderboard">
+
+            <h2>Leaderboard</h2>
+
+            <ol id="leaderboard-list">
+                <li>No scores yet.</li>
+            </ol>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+This is my example file for the Node.js file management exercise.

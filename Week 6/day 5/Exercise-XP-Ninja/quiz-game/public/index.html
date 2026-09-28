@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Node.js Quiz Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="quiz-container">
+
+        <h1>Node.js Quiz Game</h1>
+
+        <div id="quiz">
+
+            <p id="question-number"></p>
+
+            <h2 id="question">
+                Loading question...
+            </h2>
+
+            <div id="options"></div>
+
+            <button id="submit-button">
+                Submit Answer
+            </button>
+
+            <p id="feedback"></p>
+
+            <p id="score">
+                Score: 0
+            </p>
+
+        </div>
+
+        <div id="result" class="hidden">
+
+            <h2>Quiz Complete!</h2>
+
+            <p id="final-score"></p>
+
+            <button onclick="restartQuiz()">
+                Play Again
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
