@@ -1,28 +1,22 @@
 
--- Exercise 1: Items and Customers (Advanced Queries)
--- 1. All items, ordered by price (lowest to highest)
+-- 1. Show all items, ordered from the cheapest to the most expensive
 SELECT *
 FROM items
 ORDER BY price ASC;
 
-
--- 2. Items with a price above 80 (80 included),
---    ordered by price (highest to lowest)
+-- 2. Show items priced 80 or more, from highest to lowest
 SELECT *
 FROM items
 WHERE price >= 80
 ORDER BY price DESC;
 
-
--- 3. First 3 customers alphabetically by first name (A-Z)
---    Exclude the primary key
+-- 3. Show the first three customers alphabetically by first name
 SELECT first_name, last_name
 FROM customers
 ORDER BY first_name ASC
 LIMIT 3;
 
-
--- 4. All last names in reverse alphabetical order (Z-A)
+-- 4. Show all last names in reverse alphabetical order
 SELECT last_name
 FROM customers
 ORDER BY last_name DESC;

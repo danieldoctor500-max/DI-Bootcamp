@@ -1,31 +1,26 @@
--- Exercise 1: Items and Customers
-
--- 1. All items ordered by price, lowest to highest
+-- 1. Show all items from the cheapest to the most expensive
 SELECT *
 FROM items
 ORDER BY price ASC;
 
--- 2. Items with price 80 or above, highest to lowest
+-- 2. Show products priced 80 or more, from highest to lowest
 SELECT *
 FROM items
 WHERE price >= 80
 ORDER BY price DESC;
 
--- 3. First 3 customers alphabetically by first name
+-- 3. Show the first three customers alphabetically by first name
 SELECT first_name, last_name
 FROM customers
 ORDER BY first_name ASC
 LIMIT 3;
 
--- 4. Last names in reverse alphabetical order
+-- 4. Show all last names in reverse alphabetical order
 SELECT last_name
 FROM customers
 ORDER BY last_name DESC;
 
-
--- Exercise 3: Items and Customers
-
--- Create purchases table
+-- Create a table to track purchases made by customers
 CREATE TABLE purchases (
     id SERIAL PRIMARY KEY,
     customer_id INTEGER REFERENCES customers(customer_id),

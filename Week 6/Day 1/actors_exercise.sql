@@ -1,7 +1,4 @@
 
--- SQL Basics
--- Exercise 1: Actors
-
 -- Create the actors table
 CREATE TABLE actors (
     actor_id SERIAL PRIMARY KEY,
@@ -9,7 +6,7 @@ CREATE TABLE actors (
     last_name VARCHAR(50) NOT NULL
 );
 
--- Insert actors
+-- Insert sample actors
 INSERT INTO actors (first_name, last_name)
 VALUES
     ('Tom', 'Hanks'),
@@ -18,11 +15,11 @@ VALUES
     ('Emma', 'Stone'),
     ('Leonardo', 'DiCaprio');
 
-
--- Exercise 1: Count how many actors are in the table
+-- Count how many actors are in the table
 SELECT COUNT(*) AS total_actors
 FROM actors;
 
--- Exercise 2: Try to add an actor with blank fields
+-- Try inserting an actor with empty values
+-- This may fail if the database enforces NOT NULL constraints.
 INSERT INTO actors (first_name, last_name)
 VALUES (NULL, NULL);

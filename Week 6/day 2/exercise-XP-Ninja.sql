@@ -1,4 +1,4 @@
--- Create purchases table
+-- Create a purchase table to store customer orders
 CREATE TABLE purchases (
     id SERIAL PRIMARY KEY,
     customer_id INTEGER REFERENCES customers(customer_id),

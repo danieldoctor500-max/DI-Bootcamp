@@ -1,8 +1,4 @@
--- =========================================
--- EXERCISE 1: DVD RENTAL
--- =========================================
-
--- Question 1
+-- Question 1: Show all available languages
 SELECT name
 FROM language;
 

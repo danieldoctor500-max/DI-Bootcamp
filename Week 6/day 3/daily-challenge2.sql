@@ -1,8 +1,4 @@
--- PRODUCT ORDERS EXERCISE
-
-
 -- 1. Create the product_orders table
-
 CREATE TABLE product_orders (
     order_id SERIAL PRIMARY KEY,
     order_date DATE DEFAULT CURRENT_DATE

@@ -1,0 +1,19 @@
+{
+  "name": "mini-project4-notes-app",
+  "version": "1.0.0",
+  "description": "CLI Notes App using Node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "notes",
+    "cli",
+    "node"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.19",
+    "yargs": "^17.0.1"
+  }
+}

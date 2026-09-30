@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Real-Time Chat</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Join Screen -->
+    <section id="join-screen" class="screen">
+
+        <div class="card">
+
+            <h1>Real-Time Chat</h1>
+
+            <p class="subtitle">
+                Choose a username and join a chat room.
+            </p>
+
+            <form id="join-form">
+
+                <div class="form-group">
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Enter your username"
+                        maxlength="20"
+                        autocomplete="off"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="room">
+                        Chat Room
+                    </label>
+
+                    <input
+                        type="text"
+                        id="room"
+                        placeholder="Enter room name"
+                        maxlength="30"
+                        autocomplete="off"
+                        required
+                    >
+                </div>
+
+                <button type="submit">
+                    Join Chat
+                </button>
+
+            </form>
+
+            <p
+                id="join-error"
+                class="error"
+            ></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Chat Screen -->
+    <section
+        id="chat-screen"
+        class="chat-screen hidden"
+    >
+
+        <!-- Header -->
+        <header class="chat-header">
+
+            <div>
+                <h1>Real-Time Chat</h1>
+
+                <p id="room-name">
+                    Room: -
+                </p>
+            </div>
+
+            <button
+                id="leave-button"
+                class="leave-button"
+                type="button"
+            >
+                Leave Room
+            </button>
+
+        </header>
+
+
+        <!-- Main Chat Layout -->
+        <div class="chat-layout">
+
+            <!-- Active Users -->
+            <aside class="users-panel">
+
+                <h2>Active Users</h2>
+
+                <p id="user-count">
+                    0 users
+                </p>
+
+                <ul id="active-users"></ul>
+
+            </aside>
+
+
+            <!-- Chat Area -->
+            <main class="chat-area">
+
+                <!-- Messages -->
+                <div
+                    id="messages"
+                    class="messages"
+                ></div>
+
+
+                <!-- Message Form -->
+                <form
+                    id="message-form"
+                    class="message-form"
+                >
+
+                    <input
+                        type="text"
+                        id="message-input"
+                        placeholder="Type your message..."
+                        autocomplete="off"
+                        maxlength="500"
+                        required
+                    >
+
+                    <button type="submit">
+                        Send
+                    </button>
+
+                </form>
+
+            </main>
+
+        </div>
+
+    </section>
+
+
+    <!-- Socket.io Client -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- Application JavaScript -->
+    <script src="app.js"></script>
+
+</body>
+</html>

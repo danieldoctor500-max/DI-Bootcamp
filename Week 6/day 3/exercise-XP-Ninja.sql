@@ -1,7 +1,4 @@
--- Exercise 1: DVD Rentals
-
--- 1. Films rated G or PG that are not currently rented
-
+-- 1. Show films rated G or PG that are currently available
 SELECT DISTINCT
     f.film_id,
     f.title,

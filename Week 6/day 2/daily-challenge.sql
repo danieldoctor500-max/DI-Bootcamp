@@ -1,6 +1,3 @@
--- SQL Basics & Table Relationships
--- NULL and NOT IN Exercise
-
 CREATE TABLE FirstTab (
     id INTEGER,
     name VARCHAR(10)

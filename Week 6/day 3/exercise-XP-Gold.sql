@@ -1,8 +1,5 @@
--- EXERCISE 1: DVD RENTAL
-
--- 1. Get a list of all rentals which are out
--- A rental is out when return_date is NULL.
-
+-- 1. Show all rentals that are still outstanding
+-- A rental is considered active when return_date is NULL.
 SELECT *
 FROM rental
 WHERE return_date IS NULL;

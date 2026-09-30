@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1790753319281",
+    "name": "Alice",
+    "lastName": "Brown",
+    "email": "alice@example.com",
+    "username": "alice",
+    "password": "$2b$10$cP0vBmw3E/Mg6KYvzMzmReWjO74RfIjDgnQ5c7C.ok26HngCvvLbm"
+  },
+  {
+    "id": "1790753482692",
+    "name": "Bob",
+    "lastName": "Smith",
+    "email": "newbob@example.com",
+    "username": "bob",
+    "password": "$2b$10$sN7fn7w4oxIlsrZbzFBNKelf4ISEIrxtyOqwqp5rvLCEZzyQsKbQ6"
+  }
+]

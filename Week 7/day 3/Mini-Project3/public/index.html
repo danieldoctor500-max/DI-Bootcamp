@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Base Capture Arena</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header>
+        <h1>Base Capture Arena</h1>
+      </header>
+
+      <main class="layout">
+        <section class="auth-panel panel">
+          <h2>Player</h2>
+          <form id="registerForm" class="stack">
+            <input type="text" id="registerUsername" placeholder="Username" />
+            <input type="password" id="registerPassword" placeholder="Password" />
+            <button type="submit">Register</button>
+          </form>
+
+          <form id="loginForm" class="stack">
+            <input type="text" id="loginUsername" placeholder="Existing username" />
+            <input type="password" id="loginPassword" placeholder="Password" />
+            <button type="submit">Login</button>
+          </form>
+
+          <div class="session-box">
+            <p>Current player: <strong id="currentUser">Not logged in</strong></p>
+          </div>
+        </section>
+
+        <section class="game-panel panel">
+          <div class="toolbar">
+            <button class="move-btn" data-direction="up">Up</button>
+            <button class="move-btn" data-direction="left">Left</button>
+            <button class="move-btn" data-direction="right">Right</button>
+            <button class="move-btn" data-direction="down">Down</button>
+          </div>
+
+          <div id="board" class="board" aria-label="Game board"></div>
+
+          <div class="meta">
+            <p id="turnStatus">No game started</p>
+            <p id="messageBox">Create a new game to begin.</p>
+          </div>
+
+          <div class="controls">
+            <input type="text" id="opponentName" placeholder="Opponent name (optional)" />
+            <button id="newGameBtn">Start New Game</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

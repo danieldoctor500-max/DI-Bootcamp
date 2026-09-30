@@ -1,7 +1,4 @@
--- PART I
-
--- 1. Create Customer table
-
+-- 1. Create the Customer table
 CREATE TABLE Customer (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(50),
