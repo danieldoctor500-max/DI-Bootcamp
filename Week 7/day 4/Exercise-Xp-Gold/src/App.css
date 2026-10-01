@@ -1,0 +1,13 @@
+.celebrity-card {
+  width: 30rem;
+  max-width: calc(100% - 3rem);
+}
+
+.celebrity-card .card-img-top {
+  height: 260px;
+  object-fit: cover;
+}
+
+.planet-section {
+  width: min(100%, 32rem);
+}

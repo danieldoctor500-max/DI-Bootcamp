@@ -1,0 +1,119 @@
+.exercise-page {
+  width: min(880px, 100%);
+  margin: 0 auto;
+  padding: 48px 28px 72px;
+  box-sizing: border-box;
+}
+
+.page-header {
+  padding-bottom: 28px;
+  border-bottom: 2px solid #d8d6ce;
+}
+
+.page-header h1 {
+  margin: 4px 0 0;
+  color: #20251f;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1;
+}
+
+.eyebrow {
+  color: #a13d31;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.exercise-section {
+  padding: 28px 0 32px;
+  border-bottom: 1px solid #d8d6ce;
+  text-align: left;
+}
+
+.exercise-section > .eyebrow {
+  margin-bottom: 4px;
+}
+
+.exercise-section h2 {
+  margin: 0 0 18px;
+  color: #20251f;
+  font-size: 1.6rem;
+}
+
+.exercise-section h1 {
+  margin: 20px 0;
+  font-size: 1.8rem;
+}
+
+.exercise-section > p:not(.eyebrow) {
+  margin: 12px 0;
+}
+
+.user-name {
+  display: flex;
+  gap: 18px;
+}
+
+.user-name h3 {
+  margin: 0;
+  color: #a13d31;
+  font-size: 1.2rem;
+}
+
+.animal-list,
+.sample-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin: 16px 0 0;
+  padding-left: 20px;
+}
+
+.tags-exercise a {
+  color: #165e65;
+  font-weight: 700;
+}
+
+.sample-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.sample-form input {
+  min-width: 180px;
+  padding: 8px 10px;
+  border: 1px solid #8c9088;
+  border-radius: 2px;
+  font: inherit;
+}
+
+.sample-form button {
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 2px;
+  background: #a13d31;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+.sample-image {
+  display: block;
+  width: min(100%, 360px);
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+@media (max-width: 520px) {
+  .exercise-page {
+    padding: 30px 20px 48px;
+  }
+
+  .para {
+    padding: 24px;
+  }
+}

@@ -1,0 +1,70 @@
+:root {
+  color-scheme: light;
+  color: #26343b;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: #fff;
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  border: 0;
+  text-align: left;
+  display: block;
+}
+
+.destination-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.destination-carousel {
+  width: min(100%, 750px);
+}
+
+.destination-carousel .carousel .slide img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+}
+
+.destination-carousel .carousel .thumb img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.destination-carousel .carousel .thumb {
+  border: 3px solid transparent;
+}
+
+.destination-carousel .carousel .thumb.selected,
+.destination-carousel .carousel .thumb:hover {
+  border-color: #2f4651;
+}
+
+@media (max-width: 576px) {
+  .destination-page {
+    align-items: flex-start;
+    padding-top: 1.5rem;
+  }
+
+  .destination-carousel .carousel .thumbs-wrapper {
+    margin: 1rem 0 0;
+  }
+}
