@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #202b27;
+  background: #f3f5f1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+
+  --ink: #202b27;
+  --muted: #6b7770;
+  --line: #dce2dc;
+  --green: #176b52;
+  --paper: #fffefa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.page-shell {
+  width: min(100% - 40px, 760px);
+  margin: 0 auto;
+  padding: 76px 0 48px;
+}
+
+.page-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 36px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--green);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.3rem, 5vw, 3.5rem);
+  line-height: 1.1;
+}
+
+.intro {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.total-votes {
+  display: grid;
+  flex: 0 0 auto;
+  justify-items: end;
+  padding-bottom: 2px;
+}
+
+.total-number {
+  color: var(--green);
+  font-size: 1.8rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.total-label {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.poll {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+}
+
+.poll-heading,
+.language-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  align-items: center;
+  gap: 16px;
+  padding: 15px 22px;
+}
+
+.poll-heading {
+  border-bottom: 1px solid var(--line);
+  background: #e7eee7;
+}
+
+.poll-heading h2 {
+  margin: 0;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.poll-heading > span {
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.language-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.language-row {
+  min-height: 76px;
+  border-bottom: 1px solid var(--line);
+}
+
+.language-row:last-child {
+  border-bottom: 0;
+}
+
+.language-name,
+.vote-controls {
+  display: flex;
+  align-items: center;
+}
+
+.language-name {
+  gap: 13px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.language-mark {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e6ede6;
+  color: var(--green);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.mark-php {
+  background: #ebe9f3;
+  color: #5c5685;
+}
+
+.mark-python {
+  background: #e3edf2;
+  color: #326c83;
+}
+
+.mark-javascript {
+  background: #f5edcf;
+  color: #846a16;
+}
+
+.mark-java {
+  background: #f4e5dd;
+  color: #985035;
+}
+
+.vote-controls {
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.vote-count {
+  min-width: 26px;
+  color: var(--ink);
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  text-align: center;
+}
+
+.vote-button {
+  min-width: 76px;
+  min-height: 36px;
+  padding: 0 13px;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  background: var(--green);
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: background-color 140ms ease, transform 140ms ease;
+}
+
+.vote-button:hover {
+  transform: translateY(-1px);
+  background: #10543f;
+}
+
+.vote-button:focus-visible {
+  outline: 3px solid #dfbb5b;
+  outline-offset: 3px;
+}
+
+.page-footer {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 520px) {
+  .page-shell {
+    width: min(100% - 28px, 440px);
+    padding-top: 48px;
+  }
+
+  .page-header {
+    align-items: start;
+    gap: 14px;
+  }
+
+  .total-votes {
+    padding-top: 8px;
+  }
+
+  .poll-heading,
+  .language-row {
+    grid-template-columns: minmax(0, 1fr) 116px;
+    gap: 10px;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .vote-controls {
+    gap: 8px;
+  }
+
+  .vote-button {
+    min-width: 68px;
+  }
+}
