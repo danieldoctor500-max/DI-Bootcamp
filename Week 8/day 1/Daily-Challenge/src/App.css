@@ -1,0 +1,508 @@
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  width: min(100% - 48px, 1080px);
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8e9f0;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #242840;
+  font-size: 0.9rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.brand__mark {
+  display: grid;
+  width: 31px;
+  height: 31px;
+  place-items: center;
+  border-radius: 10px;
+  background: #7169d6;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.header-tag {
+  color: #9296a7;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.intro {
+  padding: 37px 0 24px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #7770cf;
+  font-size: 0.66rem;
+  font-weight: 760;
+  letter-spacing: 0.14em;
+}
+
+.intro h1 {
+  margin: 0;
+  color: #252840;
+  font-size: clamp(1.9rem, 4vw, 2.55rem);
+  font-weight: 730;
+  letter-spacing: -0.055em;
+  line-height: 1.14;
+}
+
+.intro > p:last-child {
+  margin: 9px 0 0;
+  color: #7c8192;
+  font-size: 0.86rem;
+}
+
+.challenge-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(275px, 0.85fr);
+  align-items: start;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.travel-form,
+.preview-card {
+  border: 1px solid #e7e8ef;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 6px 22px rgb(35 38 70 / 4%);
+}
+
+.travel-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 23px;
+}
+
+.form-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2px;
+}
+
+.form-heading__icon {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 12px;
+  background: #f1f0ff;
+  color: #7169d6;
+  font-size: 1.05rem;
+}
+
+.form-heading .eyebrow {
+  margin-bottom: 3px;
+  font-size: 0.6rem;
+}
+
+.form-heading h2,
+.preview-card h2 {
+  margin: 0;
+  color: #292c45;
+  font-size: 1.03rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 7px;
+  color: #4f5369;
+  font-size: 0.76rem;
+  font-weight: 650;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  height: 42px;
+  padding: 0 11px;
+  border: 1px solid #e2e4ec;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: #363a52;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 450;
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.field input::placeholder,
+.field select:invalid {
+  color: #a4a7b4;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #9992e6;
+  box-shadow: 0 0 0 3px rgb(113 105 214 / 12%);
+}
+
+.field-group {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.field-group legend {
+  margin-bottom: 8px;
+  color: #4f5369;
+  font-size: 0.76rem;
+  font-weight: 650;
+}
+
+.choice-row {
+  display: flex;
+  gap: 10px;
+}
+
+.choice-card {
+  display: inline-flex;
+  min-height: 39px;
+  flex: 1;
+  align-items: center;
+  gap: 9px;
+  padding: 0 11px;
+  border: 1px solid #e4e5ed;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 140ms ease, background 140ms ease;
+}
+
+.choice-card:has(input:checked) {
+  border-color: #aaa5e9;
+  background: #faf9ff;
+}
+
+.choice-card input,
+.checkbox-card input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.choice-card__indicator {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+  border: 1px solid #c9cbd6;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.choice-card input:checked + .choice-card__indicator {
+  border: 5px solid #7169d6;
+}
+
+.choice-card input:focus-visible + .choice-card__indicator,
+.checkbox-card input:focus-visible + .checkbox-card__indicator {
+  outline: 3px solid rgb(113 105 214 / 25%);
+  outline-offset: 2px;
+}
+
+.choice-card__label {
+  color: #666b7e;
+  font-size: 0.76rem;
+  font-weight: 550;
+}
+
+.checkbox-card {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: -1px;
+  padding: 11px 12px;
+  border: 1px solid #e7e8ef;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.checkbox-card:has(input:checked) {
+  border-color: #aaa5e9;
+  background: #faf9ff;
+}
+
+.checkbox-card__indicator {
+  display: grid;
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid #c8cad5;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.checkbox-card input:checked + .checkbox-card__indicator {
+  border-color: #7169d6;
+  background: #7169d6;
+}
+
+.checkbox-card input:checked + .checkbox-card__indicator::after {
+  width: 8px;
+  height: 5px;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  content: "";
+  transform: translateY(-1px) rotate(-45deg);
+}
+
+.checkbox-card__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.checkbox-card__copy strong {
+  color: #4e5368;
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+.checkbox-card__copy small {
+  color: #969aaa;
+  font-size: 0.66rem;
+}
+
+.submit-button {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 9px;
+  background: #6d66d4;
+  box-shadow: 0 5px 12px rgb(109 102 212 / 17%);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 680;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.submit-button:hover {
+  transform: translateY(-1px);
+  background: #5e57c7;
+}
+
+.submit-button:focus-visible {
+  outline: 3px solid rgb(113 105 214 / 30%);
+  outline-offset: 3px;
+}
+
+.submit-button span {
+  font-size: 1.1rem;
+}
+
+.preview-card {
+  position: sticky;
+  top: 20px;
+  padding: 23px;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgb(118 108 226 / 8%), transparent 48%),
+    #fff;
+}
+
+.preview-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.preview-card__top .eyebrow {
+  margin-bottom: 4px;
+  font-size: 0.6rem;
+}
+
+.preview-card h2 {
+  font-size: 1.05rem;
+}
+
+.preview-card__sparkle {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 11px;
+  background: #f2f0ff;
+  color: #7770d4;
+  font-size: 1.05rem;
+}
+
+.preview-card__hint {
+  margin: 10px 0 15px;
+  color: #858a9b;
+  font-size: 0.73rem;
+  line-height: 1.55;
+}
+
+.details-list {
+  margin: 0;
+  border-top: 1px solid #ececf2;
+}
+
+.detail-row {
+  display: flex;
+  min-height: 41px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid #f0f0f4;
+}
+
+.detail-row dt {
+  color: #85899a;
+  font-size: 0.7rem;
+}
+
+.detail-row dd {
+  max-width: 60%;
+  margin: 0;
+  color: #444960;
+  font-size: 0.74rem;
+  font-weight: 650;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.empty-value {
+  color: #c2c4ce;
+  font-weight: 450;
+}
+
+.diet-badge {
+  padding: 4px 8px;
+  border: 1px solid #e8e9ef;
+  border-radius: 999px;
+  background: #f8f8fa;
+  color: #8b8f9e;
+  font-size: 0.64rem;
+  font-weight: 650;
+}
+
+.diet-badge--yes {
+  border-color: #d6ede2;
+  background: #f1faf5;
+  color: #4e9272;
+}
+
+.preview-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f7f7fc;
+}
+
+.preview-note > span {
+  display: grid;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: #e9e7fb;
+  color: #6b65bd;
+  font-size: 0.63rem;
+  font-weight: 750;
+}
+
+.preview-note p {
+  color: #85899a;
+  font-size: 0.65rem;
+  line-height: 1.5;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 2px 18px;
+  border-top: 1px solid #e8e9f0;
+  color: #989cad;
+  font-size: 0.66rem;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    width: min(100% - 32px, 600px);
+  }
+
+  .challenge-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-card {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-shell {
+    width: calc(100% - 24px);
+  }
+
+  .page-header {
+    height: 62px;
+  }
+
+  .header-tag {
+    font-size: 0.58rem;
+  }
+
+  .intro {
+    padding: 29px 0 20px;
+  }
+
+  .travel-form,
+  .preview-card {
+    padding: 18px;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .page-footer {
+    font-size: 0.58rem;
+  }
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "Learn Express.js",
+        "description": "Study Express routes and middleware",
+        "completed": false
+    },
+    {
+        "id": 2,
+        "title": "Build Task API",
+        "description": "Create CRUD endpoints",
+        "completed": false
+    }
+]

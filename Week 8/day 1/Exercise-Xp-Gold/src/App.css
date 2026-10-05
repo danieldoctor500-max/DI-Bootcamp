@@ -1,0 +1,295 @@
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  display: flex;
+  width: min(100% - 40px, 850px);
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 60px 0 24px;
+}
+
+.page-header {
+  margin-bottom: 27px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 9px;
+  color: #766fd0;
+  font-size: 0.68rem;
+  font-weight: 760;
+  letter-spacing: 0.14em;
+}
+
+.page-header h1 {
+  margin: 0;
+  color: #23253b;
+  font-size: clamp(2rem, 5vw, 2.7rem);
+  font-weight: 740;
+  letter-spacing: -0.055em;
+  line-height: 1.12;
+}
+
+.page-header > p:last-child {
+  max-width: 500px;
+  margin: 12px auto 0;
+  color: #74798c;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.demo-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 42px 30px;
+  border: 1px solid #e7e8ef;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 14px 42px rgb(35 37 67 / 7%);
+  text-align: center;
+}
+
+.demo-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  margin-bottom: 17px;
+  border: 1px solid #e4e0ff;
+  border-radius: 15px;
+  background: #f5f3ff;
+  color: #7069d2;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.demo-card h2 {
+  margin: 0;
+  color: #2a2c43;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.demo-card > p {
+  max-width: 445px;
+  margin: 9px 0 22px;
+  color: #7c8091;
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 19px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.83rem;
+  font-weight: 680;
+  transition: background 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:focus-visible {
+  outline: 3px solid rgb(110 103 220 / 30%);
+  outline-offset: 3px;
+}
+
+.button--primary {
+  background: #6c65d7;
+  box-shadow: 0 5px 12px rgb(108 101 215 / 19%);
+  color: white;
+}
+
+.button--primary:hover {
+  background: #5e57c8;
+  box-shadow: 0 7px 16px rgb(108 101 215 / 26%);
+}
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #e9eaf0;
+  color: #989cad;
+  font-size: 0.69rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.modal-background {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(18 19 32 / 54%);
+  animation: overlay-in 150ms ease-out;
+}
+
+.modal-body {
+  width: min(100%, 460px);
+  padding: 25px;
+  border: 1px solid rgb(255 255 255 / 60%);
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgb(13 15 35 / 26%);
+  animation: modal-in 180ms ease-out;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.modal-icon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 12px;
+  background: #fff0ed;
+  color: #c05a4f;
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.modal-header .eyebrow {
+  margin-bottom: 3px;
+  color: #b76b66;
+  font-size: 0.61rem;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #292a40;
+  font-size: 1.15rem;
+  font-weight: 720;
+  letter-spacing: -0.025em;
+}
+
+.modal-content {
+  margin-top: 20px;
+}
+
+.error-message {
+  margin: 0;
+  padding: 13px 14px;
+  border: 1px solid #f0e1df;
+  border-radius: 9px;
+  background: #fff9f8;
+  color: #814d4b;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.error-stack {
+  margin-top: 13px;
+  color: #777b8d;
+  font-size: 0.75rem;
+}
+
+.error-stack summary {
+  cursor: pointer;
+  font-weight: 650;
+}
+
+.error-stack pre {
+  max-height: 160px;
+  overflow: auto;
+  color: #888293;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  white-space: pre-wrap;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eff0f4;
+}
+
+@keyframes overlay-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .app-shell {
+    width: min(100% - 28px, 440px);
+    padding-top: 34px;
+  }
+
+  .demo-card {
+    padding: 33px 20px;
+  }
+
+  .modal-body {
+    padding: 20px;
+  }
+
+  .page-footer {
+    font-size: 0.61rem;
+  }
+}
