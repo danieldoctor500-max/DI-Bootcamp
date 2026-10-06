@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 15% 10%, rgb(112 104 238 / 10%), transparent 40%),
+    #f5f7fb;
+  color: #20253a;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  display: grid;
+  min-height: 100vh;
+  padding: 24px;
+  place-items: center;
+}
+
+.message-card {
+  width: min(100%, 560px);
+  padding: clamp(24px, 6vw, 44px);
+  border: 1px solid #e8eaf2;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 18px 55px rgb(31 43 75 / 9%);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #645bd4;
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  letter-spacing: -0.045em;
+}
+
+.intro {
+  margin: 12px 0 30px;
+  color: #687286;
+  line-height: 1.6;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+  font-weight: 650;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-row input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #d9deea;
+  border-radius: 9px;
+  color: inherit;
+  font: inherit;
+  outline: none;
+}
+
+.form-row input:focus {
+  border-color: #766fe1;
+  box-shadow: 0 0 0 3px rgb(118 111 225 / 15%);
+}
+
+.form-row button {
+  flex: 0 0 auto;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 9px;
+  background: #655dd4;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 650;
+}
+
+.form-row button:hover:not(:disabled) {
+  background: #5149c0;
+}
+
+.form-row button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.server-response,
+.error-message {
+  margin: 18px 0 0;
+  padding: 13px 15px;
+  border-radius: 9px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.server-response {
+  background: #effaf5;
+  color: #216c4b;
+}
+
+.error-message {
+  background: #fff1f0;
+  color: #a7332b;
+}
+
+@media (max-width: 420px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row button {
+    min-height: 44px;
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "SocialMedias": [
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://www.twitter.com"
+    }
+  ],
+  "Skills": {
+    "JavaScript": "Advanced",
+    "React": "Intermediate",
+    "HTML": "Advanced",
+    "CSS": "Advanced"
+  },
+  "Experiences": [
+    {
+      "company": "Developer Institute",
+      "role": "Full Stack Developer",
+      "years": 2
+    },
+    {
+      "company": "Tech Company",
+      "role": "Software Developer",
+      "years": 3
+    }
+  ]
+}

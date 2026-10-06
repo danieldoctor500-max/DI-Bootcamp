@@ -1,0 +1,22 @@
+{
+  "name": "exercise-xp-ninja",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n client,users,customers \"npm:dev:client\" \"npm:dev:users\" \"npm:dev:customers\"",
+    "dev:client": "vite",
+    "dev:users": "node backend/exercise1/server.js",
+    "dev:customers": "node backend/exercise2/server.js",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "vite": "^7.1.9"
+  }
+}

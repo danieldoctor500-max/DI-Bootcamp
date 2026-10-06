@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #20252b;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: grid;
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 720px;
+  padding: 0 1.25rem;
+}
+
+.app section {
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 8%);
+}
+
+h1,
+h2 {
+  margin: 0 0 1.25rem;
+}
+
+.exercise-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.exercise-form label {
+  display: grid;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+
+.exercise-form input,
+.exercise-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #c8cdd2;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.exercise-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.exercise-form button {
+  justify-self: start;
+  padding: 0.65rem 1.25rem;
+  border: 0;
+  border-radius: 4px;
+  background: #1769aa;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+}
+
+.exercise-form button:hover {
+  background: #12578e;
+}
