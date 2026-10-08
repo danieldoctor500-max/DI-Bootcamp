@@ -12,6 +12,7 @@ import PostList from "./PostList";
 import Example1 from "./Example1";
 import Example2 from "./Example2";
 import Example3 from "./Example3";
+import AutoCompletedText from "./AutoCompletedText";
 
 // Exercise 1
 function HomeScreen() {
@@ -157,6 +158,14 @@ function App() {
           >
             Send Data
           </button>
+        </section>
+
+        <hr />
+
+        <section className="mb-5">
+          <h2>Daily Challenge 2 - Country Autocomplete</h2>
+          <p>Type a country name and select a suggestion.</p>
+          <AutoCompletedText />
         </section>
 
       </div>

@@ -1,0 +1,280 @@
+.page {
+  display: grid;
+  min-height: 100vh;
+  padding: 40px 20px;
+  place-items: start center;
+  background: #f3f5fa;
+  color: #1a2333;
+}
+
+.task-manager {
+  width: min(100%, 720px);
+  margin-top: 40px;
+  padding: 36px;
+  border: 1px solid #e0e5ef;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgb(31 45 75 / 8%);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #5a6c91;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 2.6rem);
+}
+
+.intro {
+  margin: 10px 0 26px;
+  color: #596579;
+  line-height: 1.6;
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+}
+
+.task-form input[type="text"],
+.edit-input {
+  min-width: 0;
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid #cbd3e0;
+  border-radius: 8px;
+  color: #1a2333;
+}
+
+.task-form input:focus-visible,
+.edit-input:focus-visible,
+.task-form button:focus-visible,
+.edit-form button:focus-visible,
+.filter-button:focus-visible,
+.remove-button:focus-visible,
+.edit-button:focus-visible,
+.cancel-button:focus-visible,
+.task-label input:focus-visible {
+  outline: 3px solid #7894ed;
+  outline-offset: 2px;
+}
+
+.task-form button,
+.save-button,
+.cancel-button,
+.remove-button,
+.edit-button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 650;
+}
+
+.task-form button,
+.save-button {
+  background: #3159c9;
+  color: #ffffff;
+}
+
+.task-form button:hover,
+.save-button:hover {
+  background: #2446a7;
+}
+
+.tasks-section {
+  margin-top: 32px;
+}
+
+.tasks-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tasks-heading h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.tasks-heading > span {
+  color: #596579;
+  font-size: 0.9rem;
+}
+
+.filter-bar {
+  display: inline-flex;
+  gap: 4px;
+  margin-top: 17px;
+  padding: 4px;
+  border-radius: 10px;
+  background: #f1f4f9;
+}
+
+.filter-button {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  gap: 7px;
+  padding: 0 11px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #66738a;
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 650;
+}
+
+.filter-button:hover {
+  color: #3159c9;
+}
+
+.filter-button.is-selected {
+  background: #ffffff;
+  color: #3159c9;
+  box-shadow: 0 1px 3px rgb(31 45 75 / 12%);
+}
+
+.filter-count {
+  color: #8994a8;
+  font-size: 0.78rem;
+}
+
+.empty-state {
+  margin: 18px 0 0;
+  padding: 20px;
+  border-radius: 8px;
+  background: #f5f7fb;
+  color: #596579;
+  text-align: center;
+}
+
+.task-list {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 10px 12px 10px 14px;
+  border: 1px solid #e0e5ef;
+  border-radius: 8px;
+}
+
+.task-label {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.task-label input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  accent-color: #3159c9;
+}
+
+.task-label.is-completed span {
+  color: #778197;
+  text-decoration: line-through;
+}
+
+.task-actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 6px;
+}
+
+.edit-button {
+  background: #edf2ff;
+  color: #3159c9;
+}
+
+.edit-button:hover {
+  background: #dfe8ff;
+}
+
+.remove-button {
+  background: #fff0f0;
+  color: #a52e36;
+}
+
+.remove-button:hover {
+  background: #ffe0e0;
+}
+
+.edit-form {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+
+.cancel-button {
+  background: #edf0f5;
+  color: #58647a;
+}
+
+.cancel-button:hover {
+  background: #e2e6ee;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 560px) {
+  .task-manager {
+    margin-top: 12px;
+    padding: 24px;
+  }
+
+  .task-form,
+  .edit-form {
+    flex-wrap: wrap;
+  }
+
+  .task-form input[type="text"],
+  .edit-input {
+    flex-basis: 100%;
+  }
+
+  .task-item {
+    align-items: flex-start;
+  }
+
+  .task-actions {
+    gap: 4px;
+  }
+
+  .edit-button,
+  .remove-button {
+    padding: 8px 9px;
+    font-size: 0.82rem;
+  }
+}
