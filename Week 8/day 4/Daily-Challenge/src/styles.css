@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #252d27;
+  background: #f5f5f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 3px solid #92a493;
+  outline-offset: 3px;
+}
+
+.page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 0 clamp(20px, 6vw, 84px);
+  background:
+    radial-gradient(ellipse at 15% 0%, rgb(223 232 218 / 55%), transparent 35rem),
+    #f5f5f2;
+}
+
+.topbar,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.topbar {
+  width: min(100%, 1100px);
+  min-height: 78px;
+  align-self: center;
+  border-bottom: 1px solid #e3e6df;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #27352b;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+
+.brand-icon {
+  display: grid;
+  width: 33px;
+  height: 33px;
+  place-items: center;
+  border-radius: 10px;
+  background: #496750;
+  color: #fff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.22rem;
+}
+
+.topbar-note,
+.footer {
+  color: #879084;
+  font-size: 0.78rem;
+}
+
+.calculator {
+  width: min(100%, 570px);
+  align-self: center;
+  margin: auto;
+  padding: 40px;
+  border: 1px solid #e3e7df;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 18px 55px rgb(42 57 41 / 8%);
+}
+
+.intro {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #70846f;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.intro h1 {
+  margin: 0;
+  color: #29352d;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2rem, 6vw, 2.65rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+.intro > p:last-child {
+  margin: 10px 0 0;
+  color: #879084;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.calculator-form {
+  display: grid;
+  gap: 21px;
+}
+
+.number-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr);
+  align-items: end;
+  gap: 10px;
+}
+
+.field,
+.operation-field {
+  display: grid;
+  gap: 8px;
+}
+
+.field label,
+.operation-field label {
+  color: #657064;
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.field input,
+.operation-field select {
+  width: 100%;
+  min-height: 49px;
+  padding: 0 13px;
+  border: 1px solid #dce2d9;
+  border-radius: 9px;
+  background: #fbfcfa;
+  color: #29352d;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.field input::placeholder {
+  color: #a9b1a7;
+}
+
+.field input:focus,
+.operation-field select:focus {
+  border-color: #79917b;
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(121 145 123 / 15%);
+}
+
+.operation-mark {
+  display: grid;
+  width: 34px;
+  height: 49px;
+  place-items: center;
+  color: #66806a;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.65rem;
+}
+
+.operation-field select {
+  cursor: pointer;
+}
+
+.calculate-button {
+  display: flex;
+  min-height: 51px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 9px;
+  background: #496750;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 650;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.calculate-button:hover {
+  transform: translateY(-1px);
+  background: #39563f;
+}
+
+.calculate-button span:last-child {
+  font-size: 1.2rem;
+}
+
+.message {
+  margin: 18px 0 0;
+  padding: 12px 14px;
+  border: 1px solid #f0cfcc;
+  border-radius: 9px;
+  background: #fff6f5;
+  color: #984e48;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.result-card {
+  margin-top: 22px;
+  padding: 18px 20px;
+  border: 1px solid #dce7dc;
+  border-radius: 12px;
+  background: #f3f8f1;
+  text-align: center;
+  animation: appear 220ms ease both;
+}
+
+.result-label {
+  margin: 0;
+  color: #69806b;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.equation {
+  margin: 8px 0 0;
+  color: #819080;
+  font-size: 0.9rem;
+}
+
+.result-value {
+  margin: 3px 0 0;
+  color: #39563f;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.25rem, 8vw, 3.2rem);
+  letter-spacing: -0.045em;
+  overflow-wrap: anywhere;
+}
+
+.footer {
+  width: min(100%, 1100px);
+  min-height: 61px;
+  align-self: center;
+  border-top: 1px solid #e3e6df;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 520px) {
+  .topbar {
+    min-height: 68px;
+  }
+
+  .topbar-note {
+    font-size: 0.68rem;
+  }
+
+  .calculator {
+    padding: 27px 21px;
+  }
+
+  .number-fields {
+    grid-template-columns: minmax(0, 1fr) 25px minmax(0, 1fr);
+    gap: 5px;
+  }
+
+  .field input {
+    padding: 0 9px;
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    font-size: 0.68rem;
+  }
+}

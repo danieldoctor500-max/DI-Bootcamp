@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #22251f;
+  background: #f7f6f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+a {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
+.page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 0 clamp(22px, 7vw, 100px);
+  background: var(--page-color);
+  transition: background-color 350ms ease;
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-header {
+  min-height: 88px;
+  border-bottom: 1px solid rgb(34 37 31 / 12%);
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #22251f;
+  font-size: 1.03rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+
+.wordmark-icon {
+  color: var(--accent-color);
+  font-size: 1.45rem;
+  transition: color 350ms ease;
+}
+
+.header-note,
+.site-footer {
+  color: rgb(34 37 31 / 56%);
+  font-size: 0.8rem;
+}
+
+.quote-stage {
+  display: flex;
+  width: min(100%, 770px);
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  padding: 70px 0 80px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--accent-color);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: color 350ms ease;
+}
+
+.quote-mark {
+  height: 78px;
+  margin-top: 29px;
+  color: var(--accent-color);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 8rem;
+  line-height: 1;
+  opacity: 0.32;
+  transition: color 350ms ease;
+}
+
+.quote {
+  margin: 3px 0 0;
+  color: var(--accent-color);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.15rem, 6.5vw, 4.7rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+  text-wrap: balance;
+  animation: appear 300ms ease both;
+  transition: color 350ms ease;
+}
+
+.author {
+  margin: 25px 0 0;
+  color: rgb(34 37 31 / 67%);
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.new-quote-button {
+  display: inline-flex;
+  min-height: 54px;
+  align-items: center;
+  gap: 25px;
+  margin-top: 39px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--button-color);
+  color: var(--button-text-color);
+  cursor: pointer;
+  font-size: 0.93rem;
+  font-weight: 650;
+  transition:
+    background-color 350ms ease,
+    transform 150ms ease;
+}
+
+.new-quote-button:hover {
+  transform: translateY(-2px);
+}
+
+.new-quote-button:active {
+  transform: translateY(0);
+}
+
+.button-arrow {
+  font-size: 1.2rem;
+}
+
+.hint {
+  margin: 14px 0 0;
+  color: rgb(34 37 31 / 52%);
+  font-size: 0.77rem;
+}
+
+.site-footer {
+  min-height: 64px;
+  border-top: 1px solid rgb(34 37 31 / 12%);
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 520px) {
+  .site-header {
+    min-height: 72px;
+  }
+
+  .header-note {
+    font-size: 0.72rem;
+  }
+
+  .quote-stage {
+    padding: 50px 0 58px;
+  }
+
+  .quote-mark {
+    height: 63px;
+    margin-top: 24px;
+    font-size: 6.5rem;
+  }
+
+  .author {
+    margin-top: 20px;
+  }
+
+  .new-quote-button {
+    margin-top: 31px;
+  }
+
+  .site-footer {
+    font-size: 0.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
