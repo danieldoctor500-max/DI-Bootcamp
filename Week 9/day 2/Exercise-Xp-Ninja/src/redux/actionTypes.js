@@ -1,0 +1,8 @@
+export const AUTH_REQUEST_STARTED = 'auth/requestStarted'
+export const AUTH_SUCCEEDED = 'auth/succeeded'
+export const AUTH_FAILED = 'auth/failed'
+export const AUTH_LOGGED_OUT = 'auth/loggedOut'
+export const AUTH_ERROR_CLEARED = 'auth/errorCleared'
+export const ADD_TODO = 'todos/add'
+export const TOGGLE_TODO = 'todos/toggle'
+export const REMOVE_TODO = 'todos/remove'
