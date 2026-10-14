@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #24322d;
+  background: #f5f4f0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 16px;
+  --green: #34745a;
+  --green-dark: #285c46;
+  --ink: #24322d;
+  --muted: #89918c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 3px solid #9ac8ae;
+  outline-offset: 3px;
+}
+
+.app-shell {
+  width: min(100% - 40px, 520px);
+  margin: 0 auto;
+  padding: 36px 0 48px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 76px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  color: var(--ink);
+  font-family: 'Manrope', sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--green);
+  color: white;
+  font-size: 16px;
+}
+
+.topbar-note,
+.page-note {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.auth-card {
+  padding: 42px 46px;
+  border: 1px solid #ebece7;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 18px 50px rgb(36 50 45 / 6%);
+}
+
+.card-heading {
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #87938c;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(30px, 6vw, 39px);
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.15;
+}
+
+h1 span {
+  color: var(--green);
+}
+
+.card-copy,
+.welcome-copy {
+  margin: 12px 0 0;
+  color: #7d8881;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.auth-form {
+  display: grid;
+  gap: 10px;
+}
+
+.field-label {
+  margin-top: 9px;
+  color: #45534b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.auth-input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 15px;
+  border: 1px solid #e7eae6;
+  border-radius: 10px;
+  background: #fbfcfb;
+  color: var(--ink);
+  font-size: 14px;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.auth-input::placeholder {
+  color: #a0a9a3;
+}
+
+.auth-input:focus {
+  border-color: #8bb79c;
+  box-shadow: 0 0 0 3px rgb(52 116 90 / 9%);
+  outline: none;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 46px;
+  margin-top: 14px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.primary-button {
+  background: var(--green);
+  color: white;
+}
+
+.primary-button:hover {
+  transform: translateY(-1px);
+  background: var(--green-dark);
+}
+
+.form-note {
+  margin: 6px 0 0;
+  color: #929b95;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.welcome-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.avatar {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 24px;
+  place-items: center;
+  border-radius: 20px;
+  background: #eff5f0;
+  color: var(--green);
+  font-family: 'Manrope', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.welcome-panel .eyebrow {
+  margin-bottom: 10px;
+}
+
+.user-email {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.welcome-copy {
+  max-width: 340px;
+  margin: 18px 0 10px;
+}
+
+.secondary-button {
+  padding: 0 20px;
+  border: 1px solid #e4e9e5;
+  background: #f8faf8;
+  color: var(--green-dark);
+}
+
+.secondary-button:hover {
+  background: #eff5f0;
+}
+
+.page-note {
+  margin: 24px 0 0;
+  text-align: center;
+}
+
+@media (max-width: 540px) {
+  .app-shell {
+    width: min(100% - 28px, 520px);
+    padding-top: 24px;
+  }
+
+  .topbar {
+    margin-bottom: 48px;
+  }
+
+  .topbar-note {
+    font-size: 11px;
+  }
+
+  .auth-card {
+    padding: 32px 24px;
+    border-radius: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

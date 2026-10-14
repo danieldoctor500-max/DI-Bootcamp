@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #24322d;
+  background: #f5f4f0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 16px;
+  --green: #34745a;
+  --green-dark: #285c46;
+  --ink: #24322d;
+  --muted: #89918c;
+  --line: #eceeea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 3px solid #9ac8ae;
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.app-shell {
+  width: min(100% - 40px, 760px);
+  margin: 0 auto;
+  padding: 36px 0 48px;
+}
+
+.topbar,
+.brand,
+.date-panel,
+.planner-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar {
+  margin-bottom: 56px;
+}
+
+.brand {
+  justify-content: flex-start;
+  gap: 10px;
+  color: var(--ink);
+  font-family: 'Manrope', sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--green);
+  color: white;
+  font-size: 16px;
+}
+
+.topbar-note,
+.page-note {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.date-panel {
+  gap: 28px;
+  margin-bottom: 22px;
+  padding: 4px 2px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #87938c;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+  font-size: clamp(30px, 6vw, 39px);
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.15;
+}
+
+h1 span {
+  color: var(--green);
+}
+
+.date-description {
+  margin: 10px 0 0;
+  color: #7d8881;
+  font-size: 13px;
+}
+
+.date-controls {
+  display: grid;
+  min-width: 190px;
+  gap: 7px;
+}
+
+.date-label {
+  color: #45534b;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.date-input,
+.task-title-input,
+.task-notes-input {
+  min-width: 0;
+  padding: 11px 13px;
+  border: 1px solid #e7eae6;
+  border-radius: 9px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.date-input:focus,
+.task-title-input:focus,
+.task-notes-input:focus {
+  border-color: #8bb79c;
+  box-shadow: 0 0 0 3px rgb(52 116 90 / 9%);
+  outline: none;
+}
+
+.planner-card {
+  padding: 32px 38px 20px;
+  border: 1px solid #ebece7;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 18px 50px rgb(36 50 45 / 6%);
+}
+
+.planner-heading {
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.planner-heading h2 {
+  font-size: clamp(19px, 4vw, 24px);
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.task-count {
+  padding: 7px 11px;
+  border-radius: 20px;
+  background: #eff5f0;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.add-task-form {
+  display: grid;
+  grid-template-columns: minmax(150px, 1.2fr) minmax(130px, 1fr) auto;
+  gap: 9px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.task-title-input::placeholder,
+.task-notes-input::placeholder {
+  color: #a0a9a3;
+}
+
+.primary-button {
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 9px;
+  background: var(--green);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-1px);
+  background: var(--green-dark);
+}
+
+.primary-button span {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.task-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task-row {
+  display: flex;
+  min-height: 66px;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 2px;
+  border-bottom: 1px solid var(--line);
+}
+
+.task-row:last-child {
+  border-bottom: 0;
+}
+
+.task-number {
+  width: 26px;
+  flex: 0 0 26px;
+  color: #a0aaa3;
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.task-content {
+  display: grid;
+  flex: 1;
+  gap: 4px;
+  overflow-wrap: anywhere;
+}
+
+.task-title {
+  color: #3f4b44;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.task-notes {
+  color: #929b95;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.task-actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 4px;
+}
+
+.edit-button,
+.delete-button,
+.cancel-button {
+  min-height: 30px;
+  padding: 0 9px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.edit-button {
+  color: var(--green);
+}
+
+.edit-button:hover {
+  background: #eff5f0;
+}
+
+.delete-button {
+  color: #a45a4c;
+}
+
+.delete-button:hover {
+  background: #fdf0ee;
+}
+
+.edit-task-form {
+  display: grid;
+  flex: 1;
+  grid-template-columns: minmax(120px, 1fr) minmax(110px, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.edit-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.compact-button {
+  min-height: 34px;
+  padding: 0 11px;
+}
+
+.cancel-button {
+  color: #758078;
+}
+
+.cancel-button:hover {
+  background: #f3f5f3;
+}
+
+.empty-state {
+  padding: 32px 12px 36px;
+  color: #7d8881;
+  text-align: center;
+}
+
+.empty-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 12px;
+  place-items: center;
+  border-radius: 14px;
+  background: #eff5f0;
+  color: var(--green);
+  font-size: 20px;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.page-note {
+  margin: 24px 0 0;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .app-shell {
+    width: min(100% - 28px, 760px);
+    padding-top: 24px;
+  }
+
+  .topbar {
+    margin-bottom: 38px;
+  }
+
+  .date-panel {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .date-controls {
+    width: 100%;
+  }
+
+  .planner-card {
+    padding: 26px 22px 16px;
+  }
+
+  .add-task-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .add-task-form .primary-button {
+    grid-column: 1 / -1;
+  }
+
+  .edit-task-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .edit-actions {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 460px) {
+  .topbar-note {
+    max-width: 150px;
+    font-size: 11px;
+    text-align: right;
+  }
+
+  .add-task-form {
+    grid-template-columns: 1fr;
+  }
+
+  .add-task-form .primary-button {
+    grid-column: auto;
+  }
+
+  .task-row {
+    align-items: flex-start;
+  }
+
+  .task-actions {
+    align-self: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
