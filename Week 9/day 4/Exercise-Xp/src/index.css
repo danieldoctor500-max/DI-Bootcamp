@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #24322d;
+  background: #f5f4f0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  font-weight: 400;
+  --green: #34745a;
+  --green-dark: #285c46;
+  --ink: #24322d;
+  --muted: #89918c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: var(--green);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #9ac8ae;
+  outline-offset: 3px;
+}
+
+.app-shell {
+  width: min(100% - 40px, 680px);
+  margin: 0 auto;
+  padding: 36px 0 48px;
+}
+
+.topbar,
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.topbar {
+  justify-content: space-between;
+  margin-bottom: 76px;
+}
+
+.brand {
+  gap: 10px;
+  color: var(--ink);
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--green);
+  color: white;
+  font-size: 16px;
+}
+
+.topbar-note,
+.page-note {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.user-card {
+  padding: 40px 44px 44px;
+  border: 1px solid #ebece7;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 18px 50px rgb(36 50 45 / 6%);
+}
+
+.eyebrow {
+  margin: 0 0 9px;
+  color: #87938c;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+  font-size: clamp(30px, 6vw, 39px);
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.15;
+}
+
+.intro {
+  margin: 12px 0 30px;
+  color: #7d8881;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.notice {
+  display: flex;
+  min-height: 140px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #69766e;
+  font-size: 14px;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #dce8df;
+  border-top-color: var(--green);
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+
+.error-panel {
+  padding: 20px;
+  border: 1px solid #f0d9d5;
+  border-radius: 12px;
+  background: #fdf6f4;
+  color: #944b40;
+  font-size: 14px;
+}
+
+.error-panel p {
+  margin: 0 0 14px;
+}
+
+.retry-button {
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--green);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.retry-button:hover {
+  background: var(--green-dark);
+}
+
+.profile {
+  padding-top: 25px;
+  border-top: 1px solid #eceeea;
+}
+
+.avatar {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 15px;
+  place-items: center;
+  border-radius: 18px;
+  background: #eff5f0;
+  color: var(--green);
+  font-family: 'Manrope', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.profile-heading h2 {
+  margin-bottom: 4px;
+  font-size: 22px;
+  letter-spacing: -0.6px;
+}
+
+.profile-heading a,
+.details dd {
+  font-size: 13px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 24px;
+  margin: 28px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid #eceeea;
+}
+
+.details dt {
+  margin-bottom: 6px;
+  color: #929b95;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.details dd {
+  margin: 0;
+  color: #3f4b44;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.address {
+  grid-column: 1 / -1;
+}
+
+.page-note {
+  margin: 24px 0 0;
+  text-align: center;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 540px) {
+  .app-shell {
+    width: min(100% - 28px, 680px);
+    padding-top: 24px;
+  }
+
+  .topbar {
+    margin-bottom: 48px;
+  }
+
+  .topbar-note {
+    font-size: 11px;
+  }
+
+  .user-card {
+    padding: 30px 22px;
+    border-radius: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
