@@ -1,6 +1,8 @@
 {
     "name": "npm-beginner",
     "version": "1.0.0",
+    "private": true,
+    "description": "A beginner Node.js project using npm",
     "type": "module",
     "main": "app.js",
     "scripts": {
